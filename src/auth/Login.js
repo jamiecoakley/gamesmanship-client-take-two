@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 import APIURL from '../helpers/environment';
+import "./Authorize.css";
 
 // import {
 //     fade,

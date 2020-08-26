@@ -26,9 +26,11 @@ const Authorize = (props) => {
             <h3 id="authTag">Finishing the game backlog by any means necessary! ...Eventually.</h3>
             
             {showCreate === "show" ? <Create updateToken={props.updateToken} /> : <>
-            <Button variant="contained" size="large" color="primary" id="createLog" onClick={() => {setShowCreate('show')}}>Create Game Log</Button> </>}
+            <Button variant="contained" size="large" color="primary" id="createLog" onClick={() => {setShowCreate('show')}}>Create Game Log</Button>
+            <Button variant="contained" size="large" color="primary" id="accessLog" onClick={() => {setShowLogIn('show')}}>Access Your Game Log</Button> </>}
 
             {showLogIn === "show" ? <Login updateToken={props.updateToken} /> : <>
+            <Button variant="contained" size="large" color="primary" id="createLog" onClick={() => {setShowCreate('show')}}>Create Game Log</Button>
             <Button variant="contained" size="large" color="primary" id="accessLog" onClick={() => {setShowLogIn('show')}}>Access Your Game Log</Button> </>}
 
             <p id="authFooter">Jamie Coakley © 2020</p>

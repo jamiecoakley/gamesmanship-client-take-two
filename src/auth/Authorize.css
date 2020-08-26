@@ -84,3 +84,21 @@
     margin-right: 2em;
     z-index: 5;
 }
+
+.login-form {
+    z-index: 6;
+    background-color: white;
+    grid-row-start: row3;
+    grid-row-end: row4;
+    grid-column-start: col3;
+    grid-column-end: col4;
+}
+
+.create-form {
+    z-index: 6;
+    background-color: white;
+    grid-row-start: row5;
+    grid-row-end: row6;
+    grid-column-start: col3;
+    grid-column-end: col4;
+}

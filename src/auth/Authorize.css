@@ -1,0 +1,86 @@
+@font-face {
+    font-family: 'Audiowide';
+    src: local('Audiowide'), url(../fonts/Audiowide-Regular.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Press Start 2P';
+    src: local('Press Start 2P'), url(../fonts/PressStart2P-Regular.ttf) format('truetype');
+}
+
+#authorize {
+    display: grid;
+    grid-template-rows: [row1] 30% [row2] 25% [row3] 20% [row4] 20% [row5] 5% [rowEnd];
+    row-gap: 2em;
+    grid-template-columns: [col1] 5% [col2] 20% [col3] auto [col4] 20% [col5] 5% [colEnd];
+    background-color: black;
+}
+
+#authTitle {
+    font-family: 'Audiowide';
+    font-size: 120pt;
+    grid-row-start: row1;
+    grid-row-end: row2;
+    grid-column-start: col2;
+    grid-column-end: col5;
+    justify-self: center;
+    text-shadow: 7px 7px 7px black;
+    color: white;
+    padding: .2em 0em 0em 0em;
+    z-index: 5;
+}
+
+#authTag {
+    font-family: 'Audiowide';
+    font-size: 30pt;
+    grid-row-start: row2;
+    grid-row-end: row3;
+    grid-column-start: col2;
+    grid-column-end: col5;
+    justify-self: center;
+    text-shadow: 2px 2px 2px black;
+    color: white;
+    z-index: 5;
+}
+
+#createLog {
+    grid-row-start: row3;
+    grid-row-end: row4;
+    grid-column-start: col3;
+    grid-column-end: col4;
+    align-self: stretch;
+    font-family: 'Audiowide';
+    font-size: 35pt;
+    background-color: #0075C6;
+    border: .2em solid black;
+    border-radius: 1em;
+    margin-bottom: 1.8em;
+}
+
+#accessLog {
+    grid-row-start: row4;
+    grid-row-end: row5;
+    grid-column-start: col3;
+    grid-column-end: col4;
+    align-self: stretch;
+    font-family: 'Audiowide';
+    font-size: 35pt;
+    background-color: #0075C6;
+    border: .2em solid black;
+    border-radius: 1em;
+    margin-bottom: 1.8em;
+}
+
+#authFooter {
+    font-family: 'Audiowide';
+    font-size: 16pt;
+    grid-row-start: row5;
+    grid-row-end: rowEnd;
+    grid-column-start: col4;
+    grid-column-end: colEnd;
+    justify-self: end;
+    text-shadow: 2px 2px 2px black;
+    color: white;
+    margin-right: 2em;
+    z-index: 5;
+}

@@ -1,31 +1,44 @@
 import React, { useState, useEffect } from 'react';
 //import './App.css';
 import './auth/Authorize.css'
-
+import GameIndex from './games/GameIndex';
 import Authorize from './auth/Authorize';
 
 function App() {
   const [sessionToken, setSessionToken] = useState('');
+
   useEffect(() => {
-  if (localStorage.getItem('token')){
-    setSessionToken(localStorage.getItem('token'));
+    if (localStorage.getItem('token')){
+      setSessionToken(localStorage.getItem('token'));
+    }
+  }, [])
+
+  //LOG IN  
+  const updateToken = (newToken) => {
+    localStorage.setItem('token', newToken);
+    setSessionToken(newToken);
   }
-}, [])
 
-const updateToken = (newToken) => {
-  localStorage.setItem('token', newToken);
-  setSessionToken(newToken);
-  console.log(sessionToken);
-}
-  return (
-    <div className="App">
+  // //LOG OUT
+  // const clearToken = () => {
+  //   localStorage.clear();
+  //   setSessionToken('');
+  // }
 
-      <Authorize />
+  const protectedViews = () => {
+    return (sessionToken === localStorage.getItem('token')) ?
+    <GameIndex token={sessionToken} /> :
+    <Authorize updateToken={updateToken} token={sessionToken}/>
+  }
 
+    return (
+      <div className="App">
 
-    </div>
-  );
-}
+        {/* <Authorize clearToken={clearToken}/> */}
+        {protectedViews()}
+      </div>
+    );
+  }
 
 
 

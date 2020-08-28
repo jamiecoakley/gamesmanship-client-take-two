@@ -85,7 +85,25 @@
     z-index: 5;
 }
 
-.login-form {
+.loginForm {
+    border: .2em solid black;
+    border-radius: 1em;
+    z-index: 5;
+}
+
+.createForm {
+    border: .2em solid black;
+    border-radius: 1em;
+    z-index: 5;
+}
+
+h1 {
+    z-index: 10;
+}
+
+
+
+/* .login-gamername {
     z-index: 6;
     background-color: white;
     grid-row-start: row3;
@@ -94,7 +112,7 @@
     grid-column-end: col4;
 }
 
-.create-form {
+.login-password {
     z-index: 6;
     background-color: white;
     grid-row-start: row5;
@@ -102,3 +120,21 @@
     grid-column-start: col3;
     grid-column-end: col4;
 }
+
+.create-gamername {
+    z-index: 6;
+    background-color: white;
+    grid-row-start: row3;
+    grid-row-end: row4;
+    grid-column-start: col3;
+    grid-column-end: col4;
+}
+
+.create-password {
+    z-index: 6;
+    background-color: white;
+    grid-row-start: row5;
+    grid-row-end: row6;
+    grid-column-start: col3;
+    grid-column-end: col4;
+} */

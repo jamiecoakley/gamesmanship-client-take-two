@@ -9,7 +9,7 @@ const Create = (props) => {
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        fetch(`${APIURL}/gamer/create`, {
+        fetch(`${APIURL}gamer/create`, {
             method: "POST",
             body: JSON.stringify({gamer: {gamername: gamername, password: password}}),
             headers: new Headers({

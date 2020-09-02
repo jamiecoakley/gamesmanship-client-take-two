@@ -14,7 +14,7 @@ const CreateEntry = (props) => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        fetch(`${APIURL}/entry/create`, {
+        fetch(`${APIURL}entry/create`, {
             method: 'POST',
             body: JSON.stringify({game: {
                 title: title, 

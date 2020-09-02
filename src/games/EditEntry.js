@@ -13,7 +13,7 @@ const EditEntry = (props) => {
 
     const submitEdit = (event) => {
         event.preventDefault();
-        fetch(`${APIURL}/entry/edit/${props.gameLogEdit.id}`, {
+        fetch(`${APIURL}entry/edit/${props.gameLogEdit.id}`, {
             method: 'PUT',
             body: JSON.stringify({game: {title: editTitle, hours: editHours, date: editDate, score: editScore, platform: editPlatform, review: editReview, media: editMedia}}),
             headers: new Headers({

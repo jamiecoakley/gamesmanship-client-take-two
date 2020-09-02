@@ -8,7 +8,7 @@ const GameCard = (props) => {
     const {game}=props
 
     const deleteGame = (game) => {
-        fetch(`${APIURL}/entry/delete/${game.id}`, {
+        fetch(`${APIURL}entry/delete/${game.id}`, {
             method: "DELETE",
             headers: new Headers ({
                 'Content-Type': 'application/json',

@@ -1,0 +1,165 @@
+#wrapper{
+    font-family: 'Audiowide';
+    display: grid;
+    grid-template-columns: 30% 5% 60%;
+    grid-template-rows: auto;
+    row-gap: 5em;
+
+    grid-template-areas:
+    "header header header"
+    "menu . display"
+    "menu . display"
+    "menu . display"
+    "menu . display"
+    "menu . display";
+}
+
+#welcomeHeaderDiv {
+    display: grid;
+    grid-area: header;    
+}
+
+#welcomeHeader {    
+    font-family: 'Audiowide';
+    color: #E6FFFF;
+    font-size: 70pt;
+    background-image: linear-gradient(to right, #002C4C, #00AAFF, #00AAFF, #00AAFF,  #00AAFF, #002C4C); 
+    margin: .3em .3em 0 .3em;
+    padding: 0 1em 0 1em;    
+    display: grid;
+    grid-area: header;
+    text-align: center;
+    text-shadow: 3px 3px 3px #01121D;
+    box-shadow: 2px 2px 2px #01121D; 
+    border: 2px solid #34EAE1;
+
+}
+
+#homepage {
+    display: grid;
+    grid-area: menu;
+    background-image: linear-gradient(to right, #002C4C, #00AAFF,  #00AAFF);    
+    margin-left: 3em;
+    box-shadow: 2px 2px 2px #01121D; 
+    border: 2px solid #34EAE1;
+}
+
+#createEntryButton {
+    grid-row-start: 1;
+    grid-row-end: 2;
+    justify-content: center;
+    color: #E6FFFF;
+    background-color: #008DEB;
+    border-radius: .5em;
+    box-shadow: 2px 2px 2px #01121D;
+    text-shadow: 2px 2px 2px #01121D;
+    margin: 2em;
+    padding: 2em 0em 2em 0em;
+    font-size: 30pt;
+    
+}
+
+#createEntryButton:hover {
+    background-color: #0068B3;
+}
+
+#logOutButton {
+    grid-row-start: 4;
+    grid-row-end: 5;
+    justify-content: center;
+    color: #E6FFFF;
+    background-color: #008DEB;
+    border-radius: .5em;
+    border: none;
+    text-shadow: 2px 2px 2px #01121D;
+    margin: 2em;
+    padding: 2em 0em 2em 0em;
+    font-size: 30pt;
+    box-shadow: 2px 2px 2px #01121D;
+}
+
+#logOutButton:hover {    
+    background-color: #0068B3;
+}
+
+#copyright {
+    grid-row-start: 5;
+    grid-row-end: 6;
+    align-self: end;
+    justify-self: center;
+    color: #E6FFFF;
+    text-emphasis: 1px #01121D outline;
+
+}
+
+#viewDiv {
+    display: grid;
+    grid-column-start: 3;
+    grid-column-end: 4;
+}
+
+#seeYourGames {
+    padding: .5em;
+    font-size: 30pt;
+    box-shadow: 2px 2px 2px #01121D; 
+    border: 2px solid #34EAE1;
+    background-image: linear-gradient(to right, #02ABFF, #02ABFF, #020D1B);
+    text-shadow: 3px 3px 3px #01121D;
+    box-shadow: 2px 2px 2px #01121D; 
+}
+
+#seeYourGames:hover {
+    background-image: linear-gradient(to right, #0068B3, #02ABFF, #020D1B); 
+}
+
+#gameTitleP {
+    float: left;
+}
+
+#arrowCollapse {
+    float: right; 
+    font-weight: bolder;
+    text-shadow: 2px 2px 2px #E6FFFF; 
+}
+
+.gameViewCard {
+    border: 2px solid #34EAE1;
+    background-color: #033758;
+    color: #E6FFFF;
+    font-size: 16pt;
+}
+
+#scoreHoursP {
+    display: flex;
+    justify-content: space-between;
+}
+
+#editDeleteDiv {
+    display: flex;
+    justify-content: space-around;
+}
+
+#editEntryButton {
+    color: #E6FFFF;
+    background-color: #008DEB;
+    text-shadow: 3px 3px 3px #01121D;
+    box-shadow: 2px 2px 2px #01121D; 
+    border: none;
+}
+
+#editEntryButton:hover {    
+    background-color: orange;
+}
+
+#deleteEntryButton {
+    color: #E6FFFF;
+    background-color: #008DEB;
+    text-shadow: 3px 3px 3px #01121D;
+    box-shadow: 2px 2px 2px #01121D; 
+    border: none;
+}
+
+#deleteEntryButton:hover {    
+    background-color: orangered;
+    
+}

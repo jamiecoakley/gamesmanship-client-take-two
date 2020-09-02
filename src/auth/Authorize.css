@@ -8,12 +8,18 @@
     src: local('Press Start 2P'), url(../fonts/PressStart2P-Regular.ttf) format('truetype');
 }
 
-#authorize {
+#auth {
     display: grid;
     grid-template-rows: [row1] 30% [row2] 25% [row3] 20% [row4] 20% [row5] 5% [rowEnd];
     row-gap: 2em;
     grid-template-columns: [col1] 5% [col2] 20% [col3] auto [col4] 20% [col5] 5% [colEnd];
-    background-color: black;
+}
+
+#authDiv {
+    grid-row-start: row3;
+    grid-row-end: row5;
+    grid-column-start: col2;
+    grid-column-end: col5;
 }
 
 #authTitle {
@@ -43,7 +49,7 @@
     z-index: 5;
 }
 
-#createLog {
+#createLogButton {
     grid-row-start: row3;
     grid-row-end: row4;
     grid-column-start: col3;
@@ -57,7 +63,7 @@
     margin-bottom: 1.8em;
 }
 
-#accessLog {
+#accessLogButton {
     grid-row-start: row4;
     grid-row-end: row5;
     grid-column-start: col3;
@@ -103,16 +109,17 @@ h1 {
 
 
 
-/* .login-gamername {
+.loginForm {
     z-index: 6;
-    background-color: white;
     grid-row-start: row3;
     grid-row-end: row4;
     grid-column-start: col3;
     grid-column-end: col4;
+    color: white;
+    padding: 2em;
 }
 
-.login-password {
+/*.login-password {
     z-index: 6;
     background-color: white;
     grid-row-start: row5;

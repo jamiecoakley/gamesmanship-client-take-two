@@ -1,4 +1,5 @@
-import React, {useState, Button, Form, FormGroup, Input, Label} from 'react';
+import React, {useState } from 'react';
+import {Button, Form, FormGroup, Input, Label} from 'reactstrap'
 import APIURL from '../helpers/environment';
 import "./Authorize.css";
 
@@ -25,7 +26,7 @@ const Login = (props) => {
     return(
         <div>
             <h1>ACCESS YOUR GAME LOG</h1>
-            {/* <Form onSubmit={handleSubmit} className="loginForm">
+            <Form onSubmit={handleSubmit} className="loginForm">
                 <FormGroup>
                     <Label htmlFor="gamername">GAMERNAME</Label>
                     <Input name="gamername" value={gamername} onChange={(e) => setGamername(e.target.value)} />
@@ -35,7 +36,7 @@ const Login = (props) => {
                     <Input name="password" value={password} onChange={(e) => setPassword(e.target.value)} />
                 </FormGroup>
                 <Button type="submit" className="loginButton">LOG IN</Button>
-            </Form> */}
+            </Form>
         </div>
     )
 }

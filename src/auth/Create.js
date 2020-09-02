@@ -1,4 +1,5 @@
-import React, {useState, Form, Input, Label, FormGroup, Button} from 'react';
+import React, {useState} from 'react';
+import {Form, Input, Label, FormGroup, Button} from 'reactstrap'
 import APIURL from '../helpers/environment';
 import "./Authorize.css";
 

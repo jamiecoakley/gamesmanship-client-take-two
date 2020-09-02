@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 import './auth/Authorize.css'
 import GameIndex from './games/GameIndex';
 import Authorize from './auth/Authorize';
+import backgroundVid from "../src/images/videoplayback_Trim.mp4"
 
 function App() {
   const [sessionToken, setSessionToken] = useState('');
@@ -19,22 +20,33 @@ function App() {
     setSessionToken(newToken);
   }
 
-  // //LOG OUT
-  // const clearToken = () => {
-  //   localStorage.clear();
-  //   setSessionToken('');
-  // }
+  //LOG OUT
+  const clearToken = () => {
+    localStorage.clear();
+    setSessionToken('');
+  }
 
   const protectedViews = () => {
     return (sessionToken === localStorage.getItem('token')) ?
-    <GameIndex token={sessionToken} /> :
+    <GameIndex token={sessionToken} clearToken={clearToken} /> :
     <Authorize updateToken={updateToken} token={sessionToken}/>
   }
 
     return (
       <div className="App">
-
-        {/* <Authorize clearToken={clearToken}/> */}
+      <video autoPlay loop muted id="backgroundVid"
+      style={{
+          position: "fixed",
+          width: "100%",
+          height: '100%',
+          objectFit: "cover",
+          right: 0,
+          bottom: 0,
+          zIndex: -1000,
+      }}>
+     <source src={backgroundVid} type="video/mp4" />
+  </video>
+      
         {protectedViews()}
       </div>
     );

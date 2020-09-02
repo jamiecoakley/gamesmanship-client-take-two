@@ -24,16 +24,14 @@ const Login = (props) => {
     }
 
     return(
-        <div>
-            <h1>ACCESS YOUR GAME LOG</h1>
-            <Form onSubmit={handleSubmit} className="loginForm">
-                <FormGroup>
-                    <Label htmlFor="gamername">GAMERNAME</Label>
-                    <Input name="gamername" value={gamername} onChange={(e) => setGamername(e.target.value)} />
+        <div id="accessYourLog">
+            <h1 id="loginT">ACCESS YOUR GAME LOG</h1>
+            <Form onSubmit={handleSubmit} id="loginForm">
+                <FormGroup id="loginGamername"> 
+                    <Input name="gamername" value={gamername} onChange={(e) => setGamername(e.target.value)} placeholder="ENTER YOUR GAMERNAME"/>
                 </FormGroup>
-                <FormGroup>
-                    <Label htmlFor="password">PASSWORD</Label>
-                    <Input name="password" value={password} onChange={(e) => setPassword(e.target.value)} />
+                <FormGroup id="loginPassword">
+                    <Input name="password" value={password} onChange={(e) => setPassword(e.target.value)} placeholder="ENTER YOUR PASSWORD" />
                 </FormGroup>
                 <Button type="submit" className="loginButton">LOG IN</Button>
             </Form>

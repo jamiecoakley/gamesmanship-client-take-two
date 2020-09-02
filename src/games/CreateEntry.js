@@ -39,6 +39,7 @@ const CreateEntry = (props) => {
             setReview('');
             setMedia('');
             props.fetchGames();
+            setModal(false);
         })
     }
 

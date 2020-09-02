@@ -46,7 +46,7 @@ const GameIndex = (props) => {
                 </div>                
                 
                 <div id="homepage">
-                    <CreateEntry fetchGames={props.fetchGames} token={props.token} games={games} id="createEntryButton" />
+                    <CreateEntry fetchGames={fetchGames} token={props.token} games={games} id="createEntryButton" />
                     {/* <Button id="viewAllButton" onClick={fetchMoreGames}>View All</Button> */}
                     <Button id="logOutButton" onClick={props.clearToken}>LOG OUT</Button>
                     <p id="copyright">GAMESMANSHIP by Jamie Coakley © 2020 </p>

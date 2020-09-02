@@ -10,28 +10,52 @@
 
 #auth {
     display: grid;
-    grid-template-rows: [row1] 30% [row2] 25% [row3] 20% [row4] 20% [row5] 5% [rowEnd];
+    grid-template-rows: auto ;
     row-gap: 2em;
-    grid-template-columns: [col1] 5% [col2] 20% [col3] auto [col4] 20% [col5] 5% [colEnd];
+    grid-template-columns: 5% 20% 50% 20% 5%;
+    grid-template-areas:
+    ". header header header ."
+    ". tag tag tag ."
+    ". . . . ."
+    ". . . . ."
+    ". . authDiv . ."
+    ". . authDiv . ."
+    ". . authDiv . ."
+    ". . . . ."
+    ". . . . ."
+    ". . . footer ."
+
+
+}
+#authDiv {
+    display: grid;
+    grid-area: authDiv;
+    justify-self: center;
+    grid-template-rows: auto;
+    row-gap: 1em;
+    grid-template-columns: auto;
+    grid-template-areas: 
+    "."
+    "."
+    "."
+    "create"
+    "access";    
 }
 
-#authDiv {
-    grid-row-start: row3;
-    grid-row-end: row5;
-    grid-column-start: col2;
-    grid-column-end: col5;
+
+#authDiv2 {
+    display: grid;
+    grid-area: authDiv;
 }
 
 #authTitle {
     font-family: 'Audiowide';
     font-size: 120pt;
-    grid-row-start: row1;
-    grid-row-end: row2;
-    grid-column-start: col2;
-    grid-column-end: col5;
+    display: grid;
+    grid-area: header;
     justify-self: center;
     text-shadow: 7px 7px 7px black;
-    color: white;
+    color: #E6FFFF;
     padding: .2em 0em 0em 0em;
     z-index: 5;
 }
@@ -39,109 +63,96 @@
 #authTag {
     font-family: 'Audiowide';
     font-size: 30pt;
-    grid-row-start: row2;
-    grid-row-end: row3;
-    grid-column-start: col2;
-    grid-column-end: col5;
+    display: grid;
+    grid-area: tag;
     justify-self: center;
     text-shadow: 2px 2px 2px black;
-    color: white;
+    color: #E6FFFF;
     z-index: 5;
 }
 
 #createLogButton {
-    grid-row-start: row3;
-    grid-row-end: row4;
-    grid-column-start: col3;
-    grid-column-end: col4;
+    display: grid;
+    grid-area: create;
     align-self: stretch;
     font-family: 'Audiowide';
     font-size: 35pt;
-    background-color: #0075C6;
+    background-color: #008DEB;
     border: .2em solid black;
-    border-radius: 1em;
     margin-bottom: 1.8em;
+    text-shadow: 3px 3px 3px #01121D;
+    box-shadow: 2px 2px 2px #01121D; 
+    border: 2px solid #34EAE1;
+}
+
+#createLogButton:hover {    
+    background-color: #0068B3;
 }
 
 #accessLogButton {
-    grid-row-start: row4;
-    grid-row-end: row5;
-    grid-column-start: col3;
-    grid-column-end: col4;
+    display: grid;
+    grid-area: access;
     align-self: stretch;
     font-family: 'Audiowide';
     font-size: 35pt;
-    background-color: #0075C6;
+    background-color: #008DEB;
     border: .2em solid black;
-    border-radius: 1em;
     margin-bottom: 1.8em;
+    text-shadow: 3px 3px 3px #01121D;
+    box-shadow: 2px 2px 2px #01121D; 
+    border: 2px solid #34EAE1;
+}
+
+#accessLogButton:hover {    
+    background-color: #0068B3;
 }
 
 #authFooter {
     font-family: 'Audiowide';
     font-size: 16pt;
-    grid-row-start: row5;
-    grid-row-end: rowEnd;
-    grid-column-start: col4;
-    grid-column-end: colEnd;
+    display: grid;
+    grid-area: footer;
     justify-self: end;
     text-shadow: 2px 2px 2px black;
-    color: white;
+    color: #E6FFFF;
     margin-right: 2em;
     z-index: 5;
 }
 
-.loginForm {
-    border: .2em solid black;
-    border-radius: 1em;
-    z-index: 5;
-}
-
-.createForm {
-    border: .2em solid black;
-    border-radius: 1em;
-    z-index: 5;
-}
-
-h1 {
-    z-index: 10;
-}
-
-
-
-.loginForm {
-    z-index: 6;
-    grid-row-start: row3;
-    grid-row-end: row4;
-    grid-column-start: col3;
-    grid-column-end: col4;
-    color: white;
+#createGameLogForm {
+    border: 2px solid #34EAE1;
+    box-shadow: 2px 2px 2px #01121D; 
+    font-family: 'Audiowide';
     padding: 2em;
+    background-color: #008DEB;
 }
 
-/*.login-password {
-    z-index: 6;
-    background-color: white;
-    grid-row-start: row5;
-    grid-row-end: row6;
-    grid-column-start: col3;
-    grid-column-end: col4;
+#createH {
+    color: #E6FFFF
+
 }
 
-.create-gamername {
-    z-index: 6;
-    background-color: white;
-    grid-row-start: row3;
-    grid-row-end: row4;
-    grid-column-start: col3;
-    grid-column-end: col4;
+#createForm {
+    display: grid;
+    grid-template-columns: 5% 90% 5%;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    ". . ."
+    ". . ."
+    ". createGamername ."
+    ". . ."
+    ". createPassword ."
+    ". . .";
 }
 
-.create-password {
-    z-index: 6;
-    background-color: white;
-    grid-row-start: row5;
-    grid-row-end: row6;
-    grid-column-start: col3;
-    grid-column-end: col4;
-} */
+#createGamername {
+    display: grid;
+    grid-area: createGamername;
+
+}
+
+#createPassowrd {
+    display: grid;
+    grid-area: createPassword
+}
+

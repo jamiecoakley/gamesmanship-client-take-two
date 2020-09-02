@@ -24,18 +24,16 @@ const Create = (props) => {
     }
 
     return(
-        <div>
-            <h1>CREATE A GAME LOG</h1>
+        <div id="createGameLogForm">
+            <h1 id="createH">CREATE YOUR GAME LOG</h1>
             <Form onSubmit={handleSubmit} className="createForm">
-                <FormGroup>
-                    <Label htmlFor="gamername">GAMERNAME</Label>
-                    <Input name="gamername" value={gamername} onChange={(e) => setGamername(e.target.value)} />
+                <FormGroup id="createGamername">
+                    <Input name="gamername"  value={gamername} onChange={(e) => setGamername(e.target.value)} placeholder="CHOOSE YOUR GAMERNAME WISELY"/>
                 </FormGroup>
-                <FormGroup>
-                    <Label htmlFor="password">PASSWORD</Label>
-                    <Input name="password" value={password} onChange={(e) => setPassword(e.target.value)} />
+                <FormGroup id="createPassword">
+                    <Input name="password"  value={password} onChange={(e) => setPassword(e.target.value)} placeholder="CHOOSE YOUR PASSWORD" />
                 </FormGroup>
-                <Button type="submit" className="createButton">CREATE</Button>
+                <Button type="submit" block className="createButton">CREATE</Button>
             </Form>
         </div>
     )

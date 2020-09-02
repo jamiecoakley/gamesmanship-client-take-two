@@ -18,8 +18,6 @@ const GameCard = (props) => {
         }
     
     const [updateActive, setUpdateActive] = useState(false);
-    //const [gameLogEdit, setGameLogEdit] = useState([])
-    //const [games, setGames] = useState([]);
 
     const updateOff = () => {
         setUpdateActive(false);

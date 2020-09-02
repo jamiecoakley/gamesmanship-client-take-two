@@ -10,7 +10,7 @@ const GameIndex = (props) => {
     const [games, setGames] = useState([]);
 
     const fetchGames = () => {
-        fetch(`${APIURL}/entry/view`, {
+        fetch(`${APIURL}entry/view`, {
             method: 'GET',
             headers: new Headers ({
                 'Content-Type': "application/json",
@@ -23,7 +23,7 @@ const GameIndex = (props) => {
     }
 
     // const fetchMoreGames = () => {
-    //     fetch(`${APIURL}/entry/viewall`, {
+    //     fetch(`${APIURL}entry/viewall`, {
     //         method: 'GET',
     //         headers: new Headers ({
     //             'Content-Type': "application/json",

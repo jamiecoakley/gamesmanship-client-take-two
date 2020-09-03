@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {Card, CardBody, Button, Collapse} from 'reactstrap';
+import {Card, CardBody, Button, Collapse, CardImg} from 'reactstrap';
 import EditEntry from '../games/EditEntry';
 import APIURL from '../helpers/environment';
 import './home.css';
@@ -34,7 +34,7 @@ const GameCard = (props) => {
                                 <p id="scoreHoursP"><span>SCORE: {game.score}</span> <span>PLATFORM: {game.platform}</span>
                                 <span>HOURS PLAYED: {game.hours}</span> <span>DATE COMPLETED: {game.date}</span></p>
                                 <p>REVIEW: {game.review}</p>
-                                {/* <p>MEDIA URL: {game.media}</p> */}
+                                <CardImg src={game.media} top width="50%" height="auto" alt="image goes here"/>
                     <div>
                     <br />
                     <div id="editDeleteDiv">     

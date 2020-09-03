@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {Form, Button, Input, FormGroup, Modal, ModalBody, ModalHeader, InputGroupAddon, InputGroupText} from 'reactstrap'
+import {Form, Button, Input, FormGroup, Modal, ModalBody, ModalHeader, ModalFooter, InputGroupAddon, InputGroupText} from 'reactstrap'
 import APIURL from '../helpers/environment';
 
 
@@ -113,8 +113,10 @@ const CreateEntry = (props) => {
                     <Input name="media" 
                     value={media} onChange={(e) =>setMedia(e.target.value)} placeholder="MEDIA URL" />               
                 </FormGroup>
-               
+                <ModalFooter>               
                 <Button type="submit" id="submitGameEntryButton">REMOVE FROM MY BACKLOG!</Button>
+                <Button onClick={toggle}>CANCEL</Button>
+                </ModalFooter>
             
             </Form>
             </ModalBody>

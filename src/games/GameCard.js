@@ -34,7 +34,7 @@ const GameCard = (props) => {
                                 <p id="scoreHoursP"><span>SCORE: {game.score}</span> <span>PLATFORM: {game.platform}</span>
                                 <span>HOURS PLAYED: {game.hours}</span> <span>DATE COMPLETED: {game.date}</span></p>
                                 <p>REVIEW: {game.review}</p>
-                                <CardImg src={game.media} top width="50%" height="auto" alt="image goes here"/>
+                                <CardImg src={game.media} top width="50%" height="auto" alt="your image goes here"/>
                     <div>
                     <br />
                     <div id="editDeleteDiv">     

@@ -33,7 +33,7 @@ const Login = (props) => {
                 <FormGroup id="loginPassword">
                     <Input name="password" value={password} onChange={(e) => setPassword(e.target.value)} placeholder="ENTER YOUR PASSWORD" />
                 </FormGroup>
-                <Button type="submit" className="loginButton">LOG IN</Button>
+                <button type="submit" block className="loginButton">LOG IN</button>
             </Form>
         </div>
     )

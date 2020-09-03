@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import {Form, Button, Input, FormGroup, Modal, ModalBody, ModalHeader, InputGroupAddon, InputGroupText} from 'reactstrap'
 import APIURL from '../helpers/environment';
-import "./forms.css"
+
 
 const CreateEntry = (props) => {
     const [title, setTitle] = useState('');

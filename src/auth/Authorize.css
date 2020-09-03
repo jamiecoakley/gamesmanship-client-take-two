@@ -8,6 +8,7 @@
     src: local('Press Start 2P'), url(../fonts/PressStart2P-Regular.ttf) format('truetype');
 }
 
+/* FRONT PAGE */
 #auth {
     display: grid;
     grid-template-rows: auto ;
@@ -54,7 +55,7 @@
     display: grid;
     grid-area: header;
     justify-self: center;
-    text-shadow: 7px 7px 7px black;
+    text-shadow: 7px 7px 7px #01121D;
     color: #E6FFFF;
     padding: .2em 0em 0em 0em;
     z-index: 5;
@@ -66,7 +67,7 @@
     display: grid;
     grid-area: tag;
     justify-self: center;
-    text-shadow: 2px 2px 2px black;
+    text-shadow: 2px 2px 2px #01121D;
     color: #E6FFFF;
     z-index: 5;
 }
@@ -78,7 +79,7 @@
     font-family: 'Audiowide';
     font-size: 35pt;
     background-color: #008DEB;
-    border: .2em solid black;
+    border: .2em solid #01121D;
     margin-bottom: 1.8em;
     text-shadow: 3px 3px 3px #01121D;
     box-shadow: 2px 2px 2px #01121D; 
@@ -96,7 +97,7 @@
     font-family: 'Audiowide';
     font-size: 35pt;
     background-color: #008DEB;
-    border: .2em solid black;
+    border: .2em solid #01121D;
     margin-bottom: 1.8em;
     text-shadow: 3px 3px 3px #01121D;
     box-shadow: 2px 2px 2px #01121D; 
@@ -113,12 +114,13 @@
     display: grid;
     grid-area: footer;
     justify-self: end;
-    text-shadow: 2px 2px 2px black;
+    text-shadow: 2px 2px 2px #01121D;
     color: #E6FFFF;
     margin-right: 2em;
     z-index: 5;
 }
 
+/*Create Your Game Log Form */
 #createGameLogForm {
     border: 2px solid #34EAE1;
     box-shadow: 2px 2px 2px #01121D; 
@@ -128,31 +130,104 @@
 }
 
 #createH {
-    color: #E6FFFF
+    color: #E6FFFF;
+    text-shadow: 3px 3px 3px #01121D;
+    padding: 0em 2em 1em 2em;
+    font-size: 30pt;
 
 }
 
 #createForm {
     display: grid;
-    grid-template-columns: 5% 90% 5%;
+    grid-template-columns: 5% 30% 30% 30% 5%;
     grid-template-rows: auto;
     grid-template-areas: 
-    ". . ."
-    ". . ."
-    ". createGamername ."
-    ". . ."
-    ". createPassword ."
-    ". . .";
+    ". . . . ."
+    ". cg cg cg ."
+    ". . . . ."
+    ". cp cp cp ."
+    ". . . . ."
+    ". . slb . .";
 }
 
 #createGamername {
     display: grid;
-    grid-area: createGamername;
-
+    grid-area: cg;
+    border: 1px solid #01121D;
+    border-radius: 0;
 }
 
-#createPassowrd {
+#createPassword {
     display: grid;
-    grid-area: createPassword
+    grid-area: cp;
+    border: 1px solid #01121D;
+    border-radius: 0;
 }
 
+.loggingButton {
+    display: grid;
+    grid-area: slb;
+    background-color: #01121D;
+    color: #E6FFFF;
+    justify-content: center;
+}
+
+.loggingButton:hover {
+    background-color: #0068B3
+}
+
+/* ACCESS YOUR GAME LOG FORM */
+#accessYourLog {
+    border: 2px solid #34EAE1;
+    box-shadow: 2px 2px 2px #01121D; 
+    font-family: 'Audiowide';
+    padding: 2em;
+    background-color: #008DEB;
+}
+
+#loginT {
+    color: #E6FFFF;
+    text-shadow: 3px 3px 3px #01121D;
+    padding: 0em 2em 1em 2em;
+    font-size: 30pt;
+
+}
+
+#loginForm {
+    display: grid;
+    grid-template-columns: 5% 30% 30% 30% 5%;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    ". . . . ."
+    ". lg lg lg ."
+    ". . . . ."
+    ". lp lp lp ."
+    ". . . . ."
+    ". . lb . .";
+}
+
+#loginGamername {
+    display: grid;
+    grid-area: lg;
+    border: 1px solid #01121D;
+    border-radius: 0;
+}
+
+#loginPassword {
+    display: grid;
+    grid-area: lp;
+    border: 1px solid #01121D;
+    border-radius: 0;
+}
+
+.loginButton {
+    display: grid;
+    grid-area: lb;
+    background-color: #01121D;
+    color: #E6FFFF;
+    justify-content: center;
+}
+
+.loginButton:hover {
+    background-color: #0068B3
+}

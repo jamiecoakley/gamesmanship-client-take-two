@@ -34,7 +34,7 @@ const GameCard = (props) => {
                                 <p id="scoreHoursP"><span>SCORE: {game.score}</span> <span>PLATFORM: {game.platform}</span>
                                 <span>HOURS PLAYED: {game.hours}</span> <span>DATE COMPLETED: {game.date}</span></p>
                                 <p>REVIEW: {game.review}</p>
-                                <p>MEDIA URL: {game.media}</p>
+                                {/* <p>MEDIA URL: {game.media}</p> */}
                     <div>
                     <br />
                     <div id="editDeleteDiv">     

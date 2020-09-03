@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {Form, Input, Label, FormGroup, Button} from 'reactstrap'
+import {Form, Input, FormGroup, Button} from 'reactstrap'
 import APIURL from '../helpers/environment';
 import "./Authorize.css";
 
@@ -33,7 +33,7 @@ const Create = (props) => {
                 <FormGroup id="createPassword">
                     <Input name="password"  value={password} onChange={(e) => setPassword(e.target.value)} placeholder="CHOOSE YOUR PASSWORD" />
                 </FormGroup>
-                <Button type="submit" block className="createButton">CREATE</Button>
+                <button type="submit" className="loggingButton">START LOGGING!</button>
             </Form>
         </div>
     )
